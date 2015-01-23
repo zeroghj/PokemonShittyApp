@@ -6,6 +6,8 @@
 ;Battle
 #include "Bin\Battle\IdentifyCombat.au3"
 #include "Bin\Battle\Battle.au3"
+;AutoWalkPokecenter
+#include "Bin\Battle\PokeCenter\PokeCenter.au3"
 ;Global Variables
 #include "Bin\Variables\Globals.au3"
 #include "Bin\Variables\Search.au3"
@@ -21,6 +23,8 @@
 #include "Bin\GUI\GUIHandler.au3"
 ;Search
 #include <ImageSearch.au3>
+
+
 While 1
 	  Call("Main")
 

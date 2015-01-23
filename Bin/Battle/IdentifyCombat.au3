@@ -1,6 +1,6 @@
 
 Func CheckCombat()
-local $searchbattle = _ImageSearch("Images\Search\Battle.bmp", 1,$globalx, $globaly, 0)
+local $searchbattle = _ImageSearchArea("Images\Search\Battle.bmp", 1,335 +$windowposition[0], 450+$windowposition[1],910+$windowposition[0],560+$windowposition[1],$globalx, $globaly, 0)
 if $searchbattle = 1 Then
 $inBattle = true
 Else
@@ -16,7 +16,7 @@ EndIf
 EndFunc
 
 Func ArrowCheck()
-local $searchArrow = _ImageSearch("Images\Search\arrow.bmp", 1,$globalx, $globaly, 0)
+local $searchArrow = _ImageSearchArea("Images\Search\arrow.bmp", 1,335 +$windowposition[0], 450+$windowposition[1],910+$windowposition[0],560+$windowposition[1],$globalx, $globaly, 0)
 if $searchArrow = 1 Then
 send($A)
 sleep(150)
@@ -38,7 +38,6 @@ Call("PPCheck")
 if $OutofPP Then
 Call("Abort")
 else
-beep(250,500)
 MouseMove($globalx,$globaly)
 sleep(200)
 MouseClick("left")
@@ -54,7 +53,7 @@ EndFunc
 
 Func _Run()
 local $searchRun = _ImageSearch("Images\Search\Run.bmp", 1,$globalx, $globaly, 0)
-if $searchPayDay = 1 Then
+if $searchRun = 1 Then
 MouseMove($globalx,$globaly)
 sleep(200)
 MouseClick("left")
@@ -63,8 +62,8 @@ EndIf
 EndFunc
 
 Func GoBack()
-local $searchGoBack = _ImageSearch("Images\Search\GoBack.bmp", 1,$globalx, $globaly, 0)
-if $searchPayDay = 1 Then
+local $searchGoBack = _ImageSearchArea("Images\Search\GoBack.bmp", 1,535 +$windowposition[0], 480+$windowposition[1],910+$windowposition[0],560+$windowposition[1],$globalx, $globaly, 0)
+if $searchGoBack = 1 Then
 MouseMove($globalx,$globaly)
 sleep(200)
 MouseClick("left")
