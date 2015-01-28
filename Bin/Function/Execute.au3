@@ -7,7 +7,7 @@ if ($PokemonCenterActions=0) Then
 $endofAction = $Route[0]
 	if ($endofAction < $ActionTaken+1) Then
 	$ActionTaken=0
-	$OutofPP=false
+	$RouteUnderWay=false
 	else
 	call("ExecuteStep",$Route[$ActionTaken+1])
 	$ActionTaken+= 1
@@ -16,6 +16,7 @@ else
 $endofAction = $PokemonCenter[0]
 	if ($endofAction < $PokemonCenterActions+1) Then
 	$PokemonCenterActions=0
+	$OutofPP=false
 	else
 	call("ExecuteStep",$PokemonCenter[$PokemonCenterActions+1])
 	$PokemonCenterActions+= 1

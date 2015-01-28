@@ -6,7 +6,8 @@ Func Main()
 		if $inBattle Then
 			call("Battle")
 			else
-			if $OutofPP Then
+			if $OutofPP or $RouteUnderWay Then
+			$RouteUnderWay=true
 			call("ExecuteRoute",$currentRoute)
 			else
 			call("DefaultWalking")
