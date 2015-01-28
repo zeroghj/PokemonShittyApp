@@ -7,9 +7,9 @@ Func Main()
 			call("Battle")
 			else
 			if $OutofPP Then
-			call("PokeCenterWalk")
+			call("ExecuteRoute",$currentRoute)
 			else
-			call("Walking")
+			call("DefaultWalking")
 			Endif
 		EndIf
    WEnd
@@ -25,7 +25,6 @@ $Started=false
 EndFunc
 
 Func CheckWindowPosition()
-sleep (2000)
-beep(500,500)
-$windowposition = WinGetPos("[Active]")
+WinSetState("[CLASS:LWJGL]","",@SW_SHOW)
+$windowposition = WinGetPos("[CLASS:LWJGL]")
 EndFunc
